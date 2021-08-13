@@ -168,6 +168,7 @@ class DateTimeRangePicker extends React.Component {
     let newStart = this.duplicateMomentTimeFromState(startDate, true);
     let newEnd = this.duplicateMomentTimeFromState(endDate, false);
     this.setState({ dateChange: newStart.isAfter(newEnd, 'seconds') });
+    this.setState({ disableApply: newStart.isAfter(newEnd, 'seconds') });
     this.updateStartEndAndLabels(newStart, newEnd);
     this.setToRangeValue(newStart, newEnd);
     // If Smart Mode is active change the selecting mode to opposite of what was just pressed
