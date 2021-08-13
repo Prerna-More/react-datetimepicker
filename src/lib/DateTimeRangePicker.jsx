@@ -217,7 +217,6 @@ class DateTimeRangePicker extends React.Component {
       {
         isValidTime = true;
       }
-<<<<<<< HEAD
     else{
     isValidTime = false;
     }
@@ -226,8 +225,6 @@ class DateTimeRangePicker extends React.Component {
       //this.setState({ timeChange: true ,});
       isValidTime = true;
     }
-=======
->>>>>>> 40edb39... hidde apply button for invalid condition
     else{
     isValidTime = false;
     }
