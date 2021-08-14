@@ -223,6 +223,15 @@ class DateTimeRangePicker extends React.Component {
     isValidTime = false;
     }
     this.setState({ disableApply: this.state.dateChange && isValidTime});
+    if(startNewHour > endNewHour && startNewMinute > endNewMinute){
+      //this.setState({ timeChange: true ,});
+      isValidTime = true;
+    }
+    else{
+     // this.setState({ timeChange: false, });
+     isValidTime = false;
+          }
+       this.setState({ disableApply: this.dateChange && isValidTime});
   }
 
 
