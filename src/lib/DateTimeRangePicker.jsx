@@ -70,7 +70,6 @@ class DateTimeRangePicker extends React.Component {
       this.updateStartEndAndLabels(this.props.start, this.props.end, true)
     )
     }
-    //this.setState({ disableApply: this.dateChange && this.timeChange });
   }
 
   applyCallback() {
@@ -200,7 +199,6 @@ class DateTimeRangePicker extends React.Component {
   }
 
   timeChangeCallback(newHour, newMinute, mode) {
-    console.log('last ', newHour , newMinute, mode);
     let startNewHour = 0;
     let startNewMinute = 0;
     let endNewHour = 0;
@@ -219,6 +217,7 @@ class DateTimeRangePicker extends React.Component {
       {
         isValidTime = true;
       }
+<<<<<<< HEAD
     else{
     isValidTime = false;
     }
@@ -227,11 +226,12 @@ class DateTimeRangePicker extends React.Component {
       //this.setState({ timeChange: true ,});
       isValidTime = true;
     }
+=======
+>>>>>>> 40edb39... hidde apply button for invalid condition
     else{
-     // this.setState({ timeChange: false, });
-     isValidTime = false;
-          }
-       this.setState({ disableApply: this.dateChange && isValidTime});
+    isValidTime = false;
+    }
+    this.setState({ disableApply: this.state.dateChange && isValidTime});
   }
 
 
